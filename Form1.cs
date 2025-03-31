@@ -43,6 +43,8 @@ namespace ReadFromName
         {
             if(confirm)
             {
+                error(errorMessage); //displays the error message about haveing no file
+                // probally would be best if I told them the reason, but where's the fun in that?
                 return File.Exists(fullPath());
             } else
             {
@@ -52,23 +54,19 @@ namespace ReadFromName
 
         private void btn_readAllText_Click(object sender, EventArgs e)
         {
-            if(fullPath(true))
+            if (fullPath(true))
             {
                 try
                 {
                     string text = File.ReadAllText(fullPath());
                     lst_readAllText.Items.Add(text);
-                } catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     error(errorMessage, ex); //displays the eror message, but due to the optional value, never displays the error the computer threw (however it
                                              //is still acessable, as it's acessible, since it's a higher level variable
                 }
-            } else
-            {
-                error(errorMessage); //displays the error message
-                // probally would be best if I told them the reason, but where's the fun in that?
             }
-
         }
 
         private void btn_readAllLine_Click(object sender, EventArgs e)
