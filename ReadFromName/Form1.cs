@@ -16,5 +16,15 @@ namespace ReadFromName
         {
             InitializeComponent();
         }
+
+        private void btn_readAllText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_readAllLine_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
