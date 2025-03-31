@@ -34,22 +34,25 @@ namespace ReadFromName
           //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
           //If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work right
 
-        private string fullPath(bool confirm = false)
+        private string fullPath()
         {
             string fullPath = folderName + fileName + fileExtension;
+            return fullPath;
+        }
+        private bool fullPath(bool confirm)
+        {
             if(confirm)
             {
-                File.Exists(fullPath);
-            }
+                return File.Exists(fullPath());
+            } else
             {
-                return fullPath;
-            };
+                return false;
+            }
         }
-
 
         private void btn_readAllText_Click(object sender, EventArgs e)
         {
-            if (fullPath(true))
+            if(fullPath(true))
             {
                 try
                 {
