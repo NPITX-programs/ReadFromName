@@ -16,18 +16,37 @@ namespace ReadFromName
         public Form1()
         {
             InitializeComponent();
-        }
+        }       
         string folderName = @"H:\Students_Folder\Charlie Hatch\Semesters\Multi-Semester\App Dev\Projects\App Dev 2\ReadFromName\";
         string fileName = "file";
         string fileExtension = ".txt";
+        
+        private void error(Exception ex, string message, bool revealException)
+        {
+            if (revealException) { 
+            };
+        }
+        
         private string fullPath()
         {
             string fullPath = folderName + fileName + fileExtension;
             return fullPath;
         }
+
         private void btn_readAllText_Click(object sender, EventArgs e)
         {
-            File.ReadAllText(fullPath());
+            if (File.Exists(fullPath()))
+            {
+                try
+                {
+                    string text = File.ReadAllText(fullPath());
+                    lst_readAllText.Items.Add(text);
+                } catch(Exception ex)
+                {
+                    MessageBox.Show("I'm sorry dave, I'm afraid I can't do that:" + ex.Message);
+                    error(ex,"test",false);
+                }
+            }
         }
 
         private void btn_readAllLine_Click(object sender, EventArgs e)
