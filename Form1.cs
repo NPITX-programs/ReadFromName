@@ -21,15 +21,17 @@ namespace ReadFromName
         string fileName = "file";
         string fileExtension = ".txt";
         
-        private void error(Exception ex, string message, bool revealException)
+        private void error(string message, Exception ex = null, bool revealException = false)
         {
             string msg = message;
             if (revealException) {
               msg = msg + ": " + ex.Message;
             }
             MessageBox.Show(msg);
-        }
-        
+        } //this is for error messages. the text is mandatory, but the
+          //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
+          //If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work right
+
         private string fullPath()
         {
             string fullPath = folderName + fileName + fileExtension;
@@ -46,7 +48,7 @@ namespace ReadFromName
                     lst_readAllText.Items.Add(text);
                 } catch(Exception ex)
                 {
-                    error(ex, "I'm sorry dave, I'm afraid I can't do that", false);
+                    error("I'm sorry dave, I'm afraid I can't do that", ex);
                 }
             }
         }
