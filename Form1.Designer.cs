@@ -32,6 +32,7 @@
             this.btn_readAllText = new System.Windows.Forms.Button();
             this.lst_readAllLine = new System.Windows.Forms.ListBox();
             this.btn_readAllLine = new System.Windows.Forms.Button();
+            this.btn_triggerAll = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lst_readAllText
@@ -71,11 +72,22 @@
             this.btn_readAllLine.UseVisualStyleBackColor = true;
             this.btn_readAllLine.Click += new System.EventHandler(this.btn_readAllLine_Click);
             // 
+            // btn_triggerAll
+            // 
+            this.btn_triggerAll.Location = new System.Drawing.Point(12, 12);
+            this.btn_triggerAll.Name = "btn_triggerAll";
+            this.btn_triggerAll.Size = new System.Drawing.Size(75, 44);
+            this.btn_triggerAll.TabIndex = 4;
+            this.btn_triggerAll.Text = "Use all formats";
+            this.btn_triggerAll.UseVisualStyleBackColor = true;
+            this.btn_triggerAll.Click += new System.EventHandler(this.btn_triggerAll_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_triggerAll);
             this.Controls.Add(this.btn_readAllLine);
             this.Controls.Add(this.lst_readAllLine);
             this.Controls.Add(this.btn_readAllText);
@@ -92,6 +104,7 @@
         private System.Windows.Forms.Button btn_readAllText;
         private System.Windows.Forms.ListBox lst_readAllLine;
         private System.Windows.Forms.Button btn_readAllLine;
+        private System.Windows.Forms.Button btn_triggerAll;
     }
 }
 
