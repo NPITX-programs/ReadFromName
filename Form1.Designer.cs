@@ -37,14 +37,15 @@
             // lst_readAllText
             // 
             this.lst_readAllText.FormattingEnabled = true;
-            this.lst_readAllText.Location = new System.Drawing.Point(668, 12);
+            this.lst_readAllText.HorizontalScrollbar = true;
+            this.lst_readAllText.Location = new System.Drawing.Point(418, 12);
             this.lst_readAllText.Name = "lst_readAllText";
-            this.lst_readAllText.Size = new System.Drawing.Size(120, 108);
+            this.lst_readAllText.Size = new System.Drawing.Size(370, 108);
             this.lst_readAllText.TabIndex = 0;
             // 
             // btn_readAllText
             // 
-            this.btn_readAllText.Location = new System.Drawing.Point(587, 12);
+            this.btn_readAllText.Location = new System.Drawing.Point(337, 12);
             this.btn_readAllText.Name = "btn_readAllText";
             this.btn_readAllText.Size = new System.Drawing.Size(75, 44);
             this.btn_readAllText.TabIndex = 1;
@@ -55,14 +56,14 @@
             // lst_readAllLine
             // 
             this.lst_readAllLine.FormattingEnabled = true;
-            this.lst_readAllLine.Location = new System.Drawing.Point(668, 155);
+            this.lst_readAllLine.Location = new System.Drawing.Point(418, 155);
             this.lst_readAllLine.Name = "lst_readAllLine";
-            this.lst_readAllLine.Size = new System.Drawing.Size(120, 108);
+            this.lst_readAllLine.Size = new System.Drawing.Size(370, 108);
             this.lst_readAllLine.TabIndex = 2;
             // 
             // btn_readAllLine
             // 
-            this.btn_readAllLine.Location = new System.Drawing.Point(587, 155);
+            this.btn_readAllLine.Location = new System.Drawing.Point(337, 155);
             this.btn_readAllLine.Name = "btn_readAllLine";
             this.btn_readAllLine.Size = new System.Drawing.Size(75, 44);
             this.btn_readAllLine.TabIndex = 3;
