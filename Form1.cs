@@ -43,9 +43,16 @@ namespace ReadFromName
         {
             if(confirm)
             {
-                error(errorMessage); //displays the error message about haveing no file
+                bool status = File.Exists(fullPath());
+                if (status)
+                {
+                    return true;
+                } else
+                {
+                    error(errorMessage); //displays the error message about haveing no file
                     // probally would be best if I told them the reason, but where's the fun in that?
-                return File.Exists(fullPath());
+                    return false;
+                }
             } else
             {
                 return false;
@@ -59,6 +66,7 @@ namespace ReadFromName
                 try
                 {
                     string text = File.ReadAllText(fullPath());
+                    lst_readAllText.Items.Clear();
                     lst_readAllText.Items.Add(text);
                 }
                 catch (Exception ex)
