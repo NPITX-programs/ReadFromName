@@ -20,7 +20,7 @@ namespace ReadFromName
         string folderName = @"H:\Students_Folder\Charlie Hatch\Semesters\Multi-Semester\App Dev\Projects\App Dev 2\ReadFromName\";
         string fileName = "file";
         string fileExtension = ".txt";
-        const string errorMessage = "I'm sorry dave, I'm afraid I can't do that"
+        const string errorMessage = "I'm sorry dave, I'm afraid I can't do that";
 
 
         private void error(string message, Exception ex = null, bool revealException = false)
@@ -34,15 +34,22 @@ namespace ReadFromName
           //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
           //If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work right
 
-        private string fullPath()
+        private string fullPath(bool confirm = false)
         {
             string fullPath = folderName + fileName + fileExtension;
-            return fullPath;
+            if(confirm)
+            {
+                File.Exists(fullPath);
+            }
+            {
+                return fullPath;
+            };
         }
+
 
         private void btn_readAllText_Click(object sender, EventArgs e)
         {
-            if (File.Exists(fullPath()))
+            if (fullPath(true))
             {
                 try
                 {
@@ -55,8 +62,10 @@ namespace ReadFromName
                 }
             } else
             {
-                error(errorMessage) //displays the error message
+                error(errorMessage); //displays the error message
+                // probally would be best if I told them the reason, but where's the fun in that?
             }
+
         }
 
         private void btn_readAllLine_Click(object sender, EventArgs e)
