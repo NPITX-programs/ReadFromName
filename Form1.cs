@@ -71,7 +71,16 @@ namespace ReadFromName
 
         private void btn_readAllLine_Click(object sender, EventArgs e)
         {
-
+            if (fullPath(true))
+            {
+                try
+                {
+                    File.ReadAllLines(fullPath());
+                } catch (Exception ex)
+                {
+                    error(errorMessage, ex);
+                }
+            }
         }
 
         private void btn_triggerAll_Click(object sender, EventArgs e)
