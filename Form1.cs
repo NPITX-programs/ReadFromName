@@ -20,7 +20,9 @@ namespace ReadFromName
         string folderName = @"H:\Students_Folder\Charlie Hatch\Semesters\Multi-Semester\App Dev\Projects\App Dev 2\ReadFromName\";
         string fileName = "file";
         string fileExtension = ".txt";
-        
+        const string errorMessage = "I'm sorry dave, I'm afraid I can't do that"
+
+
         private void error(string message, Exception ex = null, bool revealException = false)
         {
             string msg = message;
@@ -48,8 +50,12 @@ namespace ReadFromName
                     lst_readAllText.Items.Add(text);
                 } catch(Exception ex)
                 {
-                    error("I'm sorry dave, I'm afraid I can't do that", ex);
+                    error(errorMessage, ex); //displays the eror message, but due to the optional value, never displays the error the computer threw (however it
+                                             //is still acessable, as it's acessible, since it's a higher level variable
                 }
+            } else
+            {
+                error(errorMessage) //displays the error message
             }
         }
 
