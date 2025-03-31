@@ -20,7 +20,7 @@ namespace ReadFromName
         string folderName = @"H:\Students_Folder\Charlie Hatch\Semesters\Multi-Semester\App Dev\Projects\App Dev 2\ReadFromName\";
         string fileName = "file";
         string fileExtension = ".txt";
-        const string errorMessage = "I'm sorry dave, I'm afraid I can't do that"
+        const string errorMessage = "I'm sorry dave, I'm afraid I can't do that";
 
 
         private void error(string message, Exception ex = null, bool revealException = false)
@@ -39,23 +39,33 @@ namespace ReadFromName
             string fullPath = folderName + fileName + fileExtension;
             return fullPath;
         }
+        private bool fullPath(bool confirm)
+        {
+            if(confirm)
+            {
+                error(errorMessage); //displays the error message about haveing no file
+                // probally would be best if I told them the reason, but where's the fun in that?
+                return File.Exists(fullPath());
+            } else
+            {
+                return false;
+            }
+        }
 
         private void btn_readAllText_Click(object sender, EventArgs e)
         {
-            if (File.Exists(fullPath()))
+            if (fullPath(true))
             {
                 try
                 {
                     string text = File.ReadAllText(fullPath());
                     lst_readAllText.Items.Add(text);
-                } catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     error(errorMessage, ex); //displays the eror message, but due to the optional value, never displays the error the computer threw (however it
                                              //is still acessable, as it's acessible, since it's a higher level variable
                 }
-            } else
-            {
-                error(errorMessage) //displays the error message
             }
         }
 
