@@ -23,8 +23,11 @@ namespace ReadFromName
         
         private void error(Exception ex, string message, bool revealException)
         {
-            if (revealException) { 
-            };
+            string msg = message;
+            if (revealException) {
+              msg = msg + ": " + ex.Message;
+            }
+            MessageBox.Show(msg);
         }
         
         private string fullPath()
@@ -43,8 +46,7 @@ namespace ReadFromName
                     lst_readAllText.Items.Add(text);
                 } catch(Exception ex)
                 {
-                    MessageBox.Show("I'm sorry dave, I'm afraid I can't do that:" + ex.Message);
-                    error(ex,"test",false);
+                    error(ex, "I'm sorry dave, I'm afraid I can't do that", false);
                 }
             }
         }
