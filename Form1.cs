@@ -66,6 +66,7 @@ namespace ReadFromName
                 try
                 {
                     string text = File.ReadAllText(fullPath());
+                    lst_readAllText.Items.Clear();
                     lst_readAllText.Items.Add(text);
                 }
                 catch (Exception ex)
