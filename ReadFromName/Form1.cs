@@ -17,12 +17,17 @@ namespace ReadFromName
         {
             InitializeComponent();
         }
-        string folder = @"H:\Students_Folder\Charlie Hatch\Semesters\Multi-Semester\App Dev\Projects\App Dev 2\ReadFromName\";
+        string folderName = @"H:\Students_Folder\Charlie Hatch\Semesters\Multi-Semester\App Dev\Projects\App Dev 2\ReadFromName\";
         string fileName = "file";
         string fileExtension = ".txt";
+        private string fullPath()
+        {
+            string fullPath = folderName + fileName + fileExtension;
+            return fullPath;
+        }
         private void btn_readAllText_Click(object sender, EventArgs e)
         {
-            File.ReadAllText(folder+fileName+fileExtension);
+            File.ReadAllText(fullPath());
         }
 
         private void btn_readAllLine_Click(object sender, EventArgs e)
