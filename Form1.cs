@@ -44,7 +44,7 @@ namespace ReadFromName
             if(confirm)
             {
                 error(errorMessage); //displays the error message about haveing no file
-                // probally would be best if I told them the reason, but where's the fun in that?
+                    // probally would be best if I told them the reason, but where's the fun in that?
                 return File.Exists(fullPath());
             } else
             {
