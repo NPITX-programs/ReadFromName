@@ -75,7 +75,8 @@ namespace ReadFromName
             {
                 try
                 {
-                    File.ReadAllLines(fullPath());
+                    string[] contentArray = File.ReadAllLines(fullPath());
+                    var contentList = contentArray.ToList();
                 } catch (Exception ex)
                 {
                     error(errorMessage, ex);
