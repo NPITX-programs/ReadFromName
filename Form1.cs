@@ -86,10 +86,8 @@ namespace ReadFromName
                     string[] contentArray = File.ReadAllLines(fullPath());
                     foreach (string item in contentArray)
                     {
-                        
+                        lst_readAllLine.Items.Add(contentText);
                     }
-
-                    lst_readAllLine.Items.Add(contentText);
                 } catch (Exception ex)
                 {
                     error(errorMessage, ex); //display error if it somehow manages to not work even if the file is there
