@@ -87,7 +87,7 @@ namespace ReadFromName
                     var contentList = contentArray.ToList();
                     string contentText = contentArray.ToString();
 
-                    lst_readAllLine.Items.Add(contentArray);
+                    lst_readAllLine.Items.Add(contentList);
                 } catch (Exception ex)
                 {
                     error(errorMessage, ex); //display error if it somehow manages to not work even if the file is there
