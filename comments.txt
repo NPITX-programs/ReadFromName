@@ -3,3 +3,4 @@ list of completed comments
 trigger all
 read all lines
 read all text
+error message
