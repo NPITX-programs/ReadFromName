@@ -79,7 +79,7 @@ namespace ReadFromName
 
         private void btn_readAllLine_Click(object sender, EventArgs e)
         {
-            if (fullPath(true))
+            if (fullPath(true)) //check if file exists
             {
                 try
                 {
@@ -88,7 +88,7 @@ namespace ReadFromName
                     {
                         lst_readAllLine.Items.Add(item); //add item to list box
                     }
-                } catch (Exception ex)
+                } catch (Exception ex) //check for error
                 {
                     error(errorMessage, ex); //display error if it somehow manages to not work even if the file is there
                 }
