@@ -79,20 +79,20 @@ namespace ReadFromName
 
         private void btn_readAllLine_Click(object sender, EventArgs e)
         {
-            if (fullPath(true))
+            if (fullPath(true)) //check if file exists
             {
-                try
+                try //double check
                 {
                     string[] contentArray = File.ReadAllLines(fullPath()); //get the full lines output
                     foreach (string item in contentArray) //repeat with each
                     {
                         lst_readAllLine.Items.Add(item); //add item to list box
                     }
-                } catch (Exception ex)
+                } catch (Exception ex) //check for error
                 {
                     error(errorMessage, ex); //display error if it somehow manages to not work even if the file is there
-                }
-            }
+                } //double check
+            } //check if file exists
         }
 
         private void btn_triggerAll_Click(object sender, EventArgs e)
