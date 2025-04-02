@@ -83,10 +83,10 @@ namespace ReadFromName
             {
                 try
                 {
-                    string[] contentArray = File.ReadAllLines(fullPath());
-                    foreach (string item in contentArray)
+                    string[] contentArray = File.ReadAllLines(fullPath()); //get the full lines output
+                    foreach (string item in contentArray) //repeat with each
                     {
-                        lst_readAllLine.Items.Add(item);
+                        lst_readAllLine.Items.Add(item); //add item to list box
                     }
                 } catch (Exception ex)
                 {
