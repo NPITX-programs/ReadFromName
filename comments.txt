@@ -1,3 +1,4 @@
 list of completed comments
 
 read all text
+read all lines
