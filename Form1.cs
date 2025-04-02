@@ -86,7 +86,7 @@ namespace ReadFromName
                     string[] contentArray = File.ReadAllLines(fullPath());
                     foreach (string item in contentArray)
                     {
-                        lst_readAllLine.Items.Add(contentText);
+                        lst_readAllLine.Items.Add(item);
                     }
                 } catch (Exception ex)
                 {
