@@ -97,8 +97,8 @@ namespace ReadFromName
 
         private void btn_triggerAll_Click(object sender, EventArgs e)
         {
-            btn_readAllLine_Click(sender, e);
-            btn_readAllText_Click(sender, e);
+            btn_readAllLine_Click(sender, e); //triger read all lines
+            btn_readAllText_Click(sender, e); //triger read all text
         }
     }
 }
