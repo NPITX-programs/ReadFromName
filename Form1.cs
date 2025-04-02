@@ -83,11 +83,11 @@ namespace ReadFromName
             {
                 try
                 {
-                    string[] contentArray = File.ReadAllLines(fullPath());
-                    var contentList = contentArray.ToList();
-                    string contentText = contentArray.ToString();
-
-                    lst_readAllLine.Items.Add(contentText);
+                    string[] contentArray = File.ReadAllLines(fullPath()); //get the full lines output
+                    foreach (string item in contentArray) //repeat with each
+                    {
+                        lst_readAllLine.Items.Add(item); //add item to list box
+                    }
                 } catch (Exception ex)
                 {
                     error(errorMessage, ex); //display error if it somehow manages to not work even if the file is there
