@@ -36,16 +36,23 @@ namespace ReadFromName
 
         private string fullPath()
         {
-            string fullPath = folderName + fileName + fileExtension;
-            return fullPath;
+            string fullPath = folderName + fileName + fileExtension; //combine all parts of path
+            return fullPath; //output path
         }
         private bool fullPath(bool confirm)
         {
             if(confirm)
             {
-                error(errorMessage); //displays the error message about haveing no file
+                bool status = File.Exists(fullPath());
+                if (status)
+                {
+                    return true;
+                } else
+                {
+                    error(errorMessage); //displays the error message about haveing no file
                     // probally would be best if I told them the reason, but where's the fun in that?
-                return File.Exists(fullPath());
+                    return false;
+                }
             } else
             {
                 return false;
@@ -59,6 +66,7 @@ namespace ReadFromName
                 try
                 {
                     string text = File.ReadAllText(fullPath());
+                    lst_readAllText.Items.Clear();
                     lst_readAllText.Items.Add(text);
                 }
                 catch (Exception ex)
@@ -71,7 +79,20 @@ namespace ReadFromName
 
         private void btn_readAllLine_Click(object sender, EventArgs e)
         {
-
+            if (fullPath(true))
+            {
+                try
+                {
+                    string[] contentArray = File.ReadAllLines(fullPath()); //get the full lines output
+                    foreach (string item in contentArray) //repeat with each
+                    {
+                        lst_readAllLine.Items.Add(item); //add item to list box
+                    }
+                } catch (Exception ex)
+                {
+                    error(errorMessage, ex); //display error if it somehow manages to not work even if the file is there
+                }
+            }
         }
 
         private void btn_triggerAll_Click(object sender, EventArgs e)
