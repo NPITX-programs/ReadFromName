@@ -36,9 +36,9 @@ namespace ReadFromName
 
         private string fullPath()
         {
-            string fullPath = folderName + fileName + fileExtension; //combine all parts of path
-            return fullPath; //output path
-        }
+            string fullPath = folderName + fileName + fileExtension; //the path is in 3 parts for modularity. this combines them
+            return fullPath; //this part outputs them
+        } //full path (requires no input, it just combines the 3 pre-set variables)
         private bool fullPath(bool confirm)
         {
             if(confirm)
