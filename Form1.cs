@@ -84,8 +84,10 @@ namespace ReadFromName
                 try
                 {
                     string[] contentArray = File.ReadAllLines(fullPath());
-                    var contentList = contentArray.ToList();
-                    string contentText = contentArray.ToString();
+                    foreach (string item in contentArray)
+                    {
+                        
+                    }
 
                     lst_readAllLine.Items.Add(contentText);
                 } catch (Exception ex)
