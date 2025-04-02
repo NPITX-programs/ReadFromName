@@ -25,11 +25,11 @@ namespace ReadFromName
 
         private void error(string message, Exception ex = null, bool revealException = false)
         {
-            string msg = message;
+            string msg = message; //what message to display
             if (revealException) {
               msg = msg + ": " + ex.Message;
-            }
-            MessageBox.Show(msg);
+            }//a bool to toggle if the exception code should be included in the error message
+            MessageBox.Show(msg); //show the message
         } //this is for error messages. the text is mandatory, but the
           //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
           //If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work right
