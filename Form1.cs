@@ -85,9 +85,12 @@ namespace ReadFromName
                 {
                     string[] contentArray = File.ReadAllLines(fullPath());
                     var contentList = contentArray.ToList();
+                    string contentText = contentArray.ToString();
+
+                    lst_readAllLine.Items.Add(contentArray);
                 } catch (Exception ex)
                 {
-                    error(errorMessage, ex);
+                    error(errorMessage, ex); //display error if it somehow manages to not work even if the file is there
                 }
             }
         }
