@@ -53,11 +53,11 @@ namespace ReadFromName
                     // probally would be best if I told them the reason, but where's the fun in that?
                     //this allows the message to be trigered as part of the check, so the if that's within the button doesn't need it
                     return false; //outputs the false, as it doesn't exist
-                }
+                } //no file
             } else
             {
                 return false; //if the input is false, it doesn't check, and outputs a false
-            }
+            } //don't check
         }
 
         private void btn_readAllText_Click(object sender, EventArgs e)
