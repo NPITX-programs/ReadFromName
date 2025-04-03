@@ -5,3 +5,4 @@ read all lines
 read all text
 error message
 get file path
+check for file
