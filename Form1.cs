@@ -25,38 +25,40 @@ namespace ReadFromName
 
         private void error(string message, Exception ex = null, bool revealException = false)
         {
-            string msg = message;
-            if (revealException) {
-              msg = msg + ": " + ex.Message;
-            }
-            MessageBox.Show(msg);
+            string msg = message; //what message to display
+            if (revealException) //put the toggle
+            {
+                msg = msg + ": " + ex.Message; //the message
+            }//a bool to toggle if the exception code should be included in the error message
+            MessageBox.Show(msg); //show the message
         } //this is for error messages. the text is mandatory, but the
           //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
           //If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work right
 
         private string fullPath()
         {
-            string fullPath = folderName + fileName + fileExtension; //combine all parts of path
-            return fullPath; //output path
-        }
+            string fullPath = folderName + fileName + fileExtension; //the path is in 3 parts for modularity. this combines them
+            return fullPath; //this part outputs them
+        } //full path (requires no input, it just combines the 3 pre-set variables)
         private bool fullPath(bool confirm)
         {
-            if(confirm)
+            if(confirm) //checks if confirm has an input, then checks if it's true
             {
-                bool status = File.Exists(fullPath());
+                bool status = File.Exists(fullPath()); //if it is true, it will proceed to check if the file defined by fullPath exists
                 if (status)
                 {
-                    return true;
+                    return true; //if it exists, it outputs trye
                 } else
                 {
                     error(errorMessage); //displays the error message about haveing no file
                     // probally would be best if I told them the reason, but where's the fun in that?
-                    return false;
-                }
+                    //this allows the message to be trigered as part of the check, so the if that's within the button doesn't need it
+                    return false; //outputs the false, as it doesn't exist
+                } //no file
             } else
             {
-                return false;
-            }
+                return false; //if the input is false, it doesn't check, and outputs a false
+            } //don't check
         }
 
         private void btn_readAllText_Click(object sender, EventArgs e)
@@ -65,40 +67,40 @@ namespace ReadFromName
             {
                 try
                 {
-                    string text = File.ReadAllText(fullPath());
-                    lst_readAllText.Items.Clear();
-                    lst_readAllText.Items.Add(text);
+                    string text = File.ReadAllText(fullPath());  //read the file
+                    lst_readAllText.Items.Clear(); //clear the list
+                    lst_readAllText.Items.Add(text); //add the contents to the list box
                 }
                 catch (Exception ex)
                 {
                     error(errorMessage, ex); //displays the eror message, but due to the optional value, never displays the error the computer threw (however it
                                              //is still acessable, as it's acessible, since it's a higher level variable
-                }
-            }
+                } //double check
+            } //check for files
         }
 
         private void btn_readAllLine_Click(object sender, EventArgs e)
         {
-            if (fullPath(true))
+            if (fullPath(true)) //check if file exists
             {
-                try
+                try //double check
                 {
                     string[] contentArray = File.ReadAllLines(fullPath()); //get the full lines output
                     foreach (string item in contentArray) //repeat with each
                     {
                         lst_readAllLine.Items.Add(item); //add item to list box
                     }
-                } catch (Exception ex)
+                } catch (Exception ex) //check for error
                 {
                     error(errorMessage, ex); //display error if it somehow manages to not work even if the file is there
-                }
-            }
+                } //double check
+            } //check if file exists
         }
 
         private void btn_triggerAll_Click(object sender, EventArgs e)
         {
-            btn_readAllLine_Click(sender, e);
-            btn_readAllText_Click(sender, e);
+            btn_readAllLine_Click(sender, e); //triger read all lines
+            btn_readAllText_Click(sender, e); //triger read all text
         }
     }
 }
