@@ -110,17 +110,18 @@ namespace ReadFromName
             } //check if file exists
         } //read all the lines in the file
 
-        private void btn_triggerAll_Click(object sender, EventArgs e)
-        {
-            btn_readAllLine_Click(sender, e); //triger read all lines
-            btn_readAllText_Click(sender, e); //triger read all text
-        } //triger all the buttons
-
-
         private void btn_stringReader_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void btn_triggerAll_Click(object sender, EventArgs e)
+        {
+            btn_readAllLine_Click(sender, e); //triger read all lines
+            btn_readAllText_Click(sender, e); //triger read all text
+            btn_stringReader_Click(sender, e) //trigger the string reader
+        } //triger all the buttons
+
         #endregion UI
     }
 }
