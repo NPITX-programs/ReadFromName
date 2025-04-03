@@ -62,6 +62,9 @@ namespace ReadFromName
                 return false; //if the input is false, it doesn't check, and outputs a false
             } //don't check
         } //confirming the file
+        // I used the same method as the one to make the path, and a feature I found called "method overloading". basicaly, by making a method with different paramaters
+        //it will run the method that I put the paramaters in. So, if I don't put in anything (the first method), it will output that string. But, if I put in a boolean (like this one)
+        //then it will preform the check
 
         private void btn_readAllText_Click(object sender, EventArgs e)
         {
