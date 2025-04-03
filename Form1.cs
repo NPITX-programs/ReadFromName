@@ -39,7 +39,9 @@ namespace ReadFromName
         {
             string fullPath = folderName + fileName + fileExtension; //the path is in 3 parts for modularity. this combines them
             return fullPath; //this part outputs them
-        } //full path (requires no input, it just combines the 3 pre-set variables)
+        } //full path (requires no input, it just combines the 3 pre-set variables). Due to method overloading, this is the "same" method as the one
+        // that checks for the files existance. if you mathch this ones paramaters (meaning no input), it will do this one. Input a boolean, and it will match the other, and therefore check
+        //for it's existance
         private bool fullPath(bool confirm)
         {
             if(confirm) //checks if confirm has an input, then checks if it's true
