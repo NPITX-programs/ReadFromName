@@ -65,19 +65,19 @@ namespace ReadFromName
         {
             if (fullPath(true))
             {
-                try
+                try //double check
                 {
                     string text = File.ReadAllText(fullPath());  //read the file
                     lst_readAllText.Items.Clear(); //clear the list
                     lst_readAllText.Items.Add(text); //add the contents to the list box
                 }
-                catch (Exception ex)
+                catch (Exception ex) //if there's an error
                 {
                     error(errorMessage, ex); //displays the eror message, but due to the optional value, never displays the error the computer threw (however it
                                              //is still acessable, as it's acessible, since it's a higher level variable
                 } //double check
             } //check for files
-        }
+        } //read all the text in the file
 
         private void btn_readAllLine_Click(object sender, EventArgs e)
         {
