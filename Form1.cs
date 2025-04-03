@@ -112,14 +112,23 @@ namespace ReadFromName
 
         private void btn_stringReader_Click(object sender, EventArgs e)
         {
-
+            if (fullPath(true)) //check if file exists
+            {
+                try //double check
+                {
+                    //insert code here
+                } catch (Exception ex) //check for error
+                {
+                    error(errorMessage, ex); //display error message
+                }
+            }
         }
 
         private void btn_triggerAll_Click(object sender, EventArgs e)
         {
             btn_readAllLine_Click(sender, e); //triger read all lines
             btn_readAllText_Click(sender, e); //triger read all text
-            btn_stringReader_Click(sender, e) //trigger the string reader
+            btn_stringReader_Click(sender, e); //trigger the string reader
         } //triger all the buttons
 
         #endregion UI
