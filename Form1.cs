@@ -32,8 +32,8 @@ namespace ReadFromName
             }//a bool to toggle if the exception code should be included in the error message
             MessageBox.Show(msg); //show the message
         } //this is for error messages. the text is mandatory, but the
-          //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
-          // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work right
+        //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
+        // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work right
 
         private string fullPath()
         {
@@ -42,6 +42,7 @@ namespace ReadFromName
         } //full path (requires no input, it just combines the 3 pre-set variables). Due to method overloading, this is the "same" method as the one
         // that checks for the files existance. if you mathch this ones paramaters (meaning no input), it will do this one. Input a boolean, and it will match the other, and therefore check
         //for it's existance
+
         private bool fullPath(bool confirm)
         {
             if(confirm) //checks if confirm has an input, then checks if it's true
@@ -67,6 +68,8 @@ namespace ReadFromName
         // I used the same method as the one to make the path, and a feature I found called "method overloading". basicaly, by making a method with different paramaters
         //it will run the method that I put the paramaters in. So, if I don't put in anything (the first method), it will output that string. But, if I put in a boolean (like this one)
         //then it will preform the check
+
+
 
         private void btn_readAllText_Click(object sender, EventArgs e)
         {
