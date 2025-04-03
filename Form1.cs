@@ -71,7 +71,7 @@ namespace ReadFromName
           //then it will preform the check
         #endregion
 
-
+        #region UI
         private void btn_readAllText_Click(object sender, EventArgs e)
         {
             if (fullPath(true))
@@ -113,5 +113,6 @@ namespace ReadFromName
             btn_readAllLine_Click(sender, e); //triger read all lines
             btn_readAllText_Click(sender, e); //triger read all text
         } //triger all the buttons
+        #endregion UI
     }
 }
