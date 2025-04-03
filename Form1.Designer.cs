@@ -131,6 +131,7 @@
             this.btn_stringReader.TabIndex = 1;
             this.btn_stringReader.Text = "String Reader";
             this.btn_stringReader.UseVisualStyleBackColor = true;
+            this.btn_stringReader.Click += new System.EventHandler(this.btn_stringReader_Click);
             // 
             // lst_stringReader
             // 

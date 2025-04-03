@@ -115,6 +115,12 @@ namespace ReadFromName
             btn_readAllLine_Click(sender, e); //triger read all lines
             btn_readAllText_Click(sender, e); //triger read all text
         } //triger all the buttons
+
+
+        private void btn_stringReader_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion UI
     }
 }
