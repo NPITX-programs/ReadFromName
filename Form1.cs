@@ -22,7 +22,7 @@ namespace ReadFromName
         string fileExtension = ".txt";
         const string errorMessage = "I'm sorry dave, I'm afraid I can't do that";
 
-
+        #region messages
         private void error(string message, Exception ex = null, bool revealException = false)
         {
             string msg = message; //what message to display
@@ -33,8 +33,10 @@ namespace ReadFromName
             MessageBox.Show(msg); //show the message
         } //this is for error messages. the text is mandatory, but the
           //rest isn't necessary. if you don't provide an exception, it won't display one. If you provide an error, it will default to "hide error".
-          // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work right
+          // WARNING: If you provide a boolean, you can controll if it's hidden. If you provide a boolean but no error, well, it won't work righ
+        #endregion messages
 
+        #region fileAcess
         private string fullPath()
         {
             string fullPath = folderName + fileName + fileExtension; //the path is in 3 parts for modularity. this combines them
@@ -42,6 +44,7 @@ namespace ReadFromName
         } //full path (requires no input, it just combines the 3 pre-set variables). Due to method overloading, this is the "same" method as the one
         // that checks for the files existance. if you mathch this ones paramaters (meaning no input), it will do this one. Input a boolean, and it will match the other, and therefore check
         //for it's existance
+
         private bool fullPath(bool confirm)
         {
             if(confirm) //checks if confirm has an input, then checks if it's true
@@ -64,10 +67,13 @@ namespace ReadFromName
                 return false; //if the input is false, it doesn't check, and outputs a false
             } //don't check
         } //confirming the file
-        // I used the same method as the one to make the path, and a feature I found called "method overloading". basicaly, by making a method with different paramaters
-        //it will run the method that I put the paramaters in. So, if I don't put in anything (the first method), it will output that string. But, if I put in a boolean (like this one)
-        //then it will preform the check
+          // I used the same method as the one to make the path, and a feature I found called "method overloading". basicaly, by making a method with different paramaters
+          //it will run the method that I put the paramaters in. So, if I don't put in anything (the first method), it will output that string. But, if I put in a boolean (like this one)
+          //then it will preform the check
+        #endregion
 
+
+        #region UI
         private void btn_readAllText_Click(object sender, EventArgs e)
         {
             if (fullPath(true))
@@ -109,5 +115,6 @@ namespace ReadFromName
             btn_readAllLine_Click(sender, e); //triger read all lines
             btn_readAllText_Click(sender, e); //triger read all text
         } //triger all the buttons
+        #endregion UI
     }
 }
