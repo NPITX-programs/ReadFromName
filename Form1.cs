@@ -48,18 +48,20 @@ namespace ReadFromName
                 if (status)
                 {
                     return true; //if it exists, it outputs trye
-                } else
+                } //a boolean representing wether or not the file exists
+                else
                 {
                     error(errorMessage); //displays the error message about haveing no file
                     // probally would be best if I told them the reason, but where's the fun in that?
                     //this allows the message to be trigered as part of the check, so the if that's within the button doesn't need it
                     return false; //outputs the false, as it doesn't exist
                 } //no file
-            } else
+            }// wether to confirm or not. if it should, it does this code
+            else
             {
                 return false; //if the input is false, it doesn't check, and outputs a false
             } //don't check
-        }
+        } //confirming the file
 
         private void btn_readAllText_Click(object sender, EventArgs e)
         {
