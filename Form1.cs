@@ -89,13 +89,13 @@ namespace ReadFromName
                     foreach (string item in contentArray) //repeat with each
                     {
                         lst_readAllLine.Items.Add(item); //add item to list box
-                    }
+                    } //repeat each individual line to add it
                 } catch (Exception ex) //check for error
                 {
                     error(errorMessage, ex); //display error if it somehow manages to not work even if the file is there
                 } //double check
             } //check if file exists
-        }
+        } //read all the lines in the file
 
         private void btn_triggerAll_Click(object sender, EventArgs e)
         {
