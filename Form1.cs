@@ -41,21 +41,22 @@ namespace ReadFromName
         }
         private bool fullPath(bool confirm)
         {
-            if(confirm)
+            if(confirm) //checks if confirm has an input, then checks if it's true
             {
-                bool status = File.Exists(fullPath());
+                bool status = File.Exists(fullPath()); //if it is true, it will proceed to check if the file defined by fullPath exists
                 if (status)
                 {
-                    return true;
+                    return true; //if it exists, it outputs trye
                 } else
                 {
                     error(errorMessage); //displays the error message about haveing no file
                     // probally would be best if I told them the reason, but where's the fun in that?
-                    return false;
+                    //this allows the message to be trigered as part of the check, so the if that's within the button doesn't need it
+                    return false; //outputs the false, as it doesn't exist
                 }
             } else
             {
-                return false;
+                return false; //if the input is false, it doesn't check, and outputs a false
             }
         }
 
