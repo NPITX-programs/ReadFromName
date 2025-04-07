@@ -112,7 +112,16 @@ namespace ReadFromName
 
         private void btn_stringReader_Click(object sender, EventArgs e)
         {
-
+            if (fullPath(true)) //check if file exists
+            {
+                try //double check
+                {
+                    //insert code here
+                } catch (Exception ex) //check for error
+                {
+                    error(errorMessage, ex); //display error message
+                }
+            }
         }
 
         private void btn_triggerAll_Click(object sender, EventArgs e)
