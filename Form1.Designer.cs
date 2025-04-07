@@ -47,7 +47,7 @@
             // 
             this.lst_readAllText.FormattingEnabled = true;
             this.lst_readAllText.HorizontalScrollbar = true;
-            this.lst_readAllText.Location = new System.Drawing.Point(81, 0);
+            this.lst_readAllText.Location = new System.Drawing.Point(82, 0);
             this.lst_readAllText.Name = "lst_readAllText";
             this.lst_readAllText.Size = new System.Drawing.Size(370, 108);
             this.lst_readAllText.TabIndex = 0;
@@ -65,7 +65,7 @@
             // lst_readAllLine
             // 
             this.lst_readAllLine.FormattingEnabled = true;
-            this.lst_readAllLine.Location = new System.Drawing.Point(81, 0);
+            this.lst_readAllLine.Location = new System.Drawing.Point(82, 2);
             this.lst_readAllLine.Name = "lst_readAllLine";
             this.lst_readAllLine.Size = new System.Drawing.Size(370, 108);
             this.lst_readAllLine.TabIndex = 2;
@@ -116,7 +116,7 @@
             // 
             this.groupBox3.Controls.Add(this.btn_stringReader);
             this.groupBox3.Controls.Add(this.lst_stringReader);
-            this.groupBox3.Location = new System.Drawing.Point(345, 332);
+            this.groupBox3.Location = new System.Drawing.Point(345, 335);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(452, 116);
             this.groupBox3.TabIndex = 6;
@@ -137,7 +137,7 @@
             // 
             this.lst_stringReader.FormattingEnabled = true;
             this.lst_stringReader.HorizontalScrollbar = true;
-            this.lst_stringReader.Location = new System.Drawing.Point(81, 0);
+            this.lst_stringReader.Location = new System.Drawing.Point(82, 8);
             this.lst_stringReader.Name = "lst_stringReader";
             this.lst_stringReader.Size = new System.Drawing.Size(370, 108);
             this.lst_stringReader.TabIndex = 0;
