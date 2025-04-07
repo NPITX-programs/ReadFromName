@@ -96,6 +96,7 @@ namespace ReadFromName
         {
             if (fullPath(true)) //check if file exists
             {
+                lst_readAllLine.Items.Clear();
                 try //double check
                 {
                     string[] contentArray = File.ReadAllLines(fullPath()); //get the full lines output
