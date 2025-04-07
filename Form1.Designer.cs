@@ -37,7 +37,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_stringReader = new System.Windows.Forms.Button();
-            this.lst_stringReader = new System.Windows.Forms.ListBox();
+            this.lst_streamReader = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -115,8 +115,8 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btn_stringReader);
-            this.groupBox3.Controls.Add(this.lst_stringReader);
-            this.groupBox3.Location = new System.Drawing.Point(345, 335);
+            this.groupBox3.Controls.Add(this.lst_streamReader);
+            this.groupBox3.Location = new System.Drawing.Point(345, 322);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(452, 116);
             this.groupBox3.TabIndex = 6;
@@ -129,18 +129,18 @@
             this.btn_stringReader.Name = "btn_stringReader";
             this.btn_stringReader.Size = new System.Drawing.Size(75, 44);
             this.btn_stringReader.TabIndex = 1;
-            this.btn_stringReader.Text = "String Reader";
+            this.btn_stringReader.Text = "Stream Reader";
             this.btn_stringReader.UseVisualStyleBackColor = true;
-            this.btn_stringReader.Click += new System.EventHandler(this.btn_stringReader_Click);
+            this.btn_stringReader.Click += new System.EventHandler(this.btn_streamReader_Click);
             // 
-            // lst_stringReader
+            // lst_streamReader
             // 
-            this.lst_stringReader.FormattingEnabled = true;
-            this.lst_stringReader.HorizontalScrollbar = true;
-            this.lst_stringReader.Location = new System.Drawing.Point(82, 8);
-            this.lst_stringReader.Name = "lst_stringReader";
-            this.lst_stringReader.Size = new System.Drawing.Size(370, 108);
-            this.lst_stringReader.TabIndex = 0;
+            this.lst_streamReader.FormattingEnabled = true;
+            this.lst_streamReader.HorizontalScrollbar = true;
+            this.lst_streamReader.Location = new System.Drawing.Point(82, 8);
+            this.lst_streamReader.Name = "lst_streamReader";
+            this.lst_streamReader.Size = new System.Drawing.Size(370, 108);
+            this.lst_streamReader.TabIndex = 0;
             // 
             // Form1
             // 
@@ -171,7 +171,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btn_stringReader;
-        private System.Windows.Forms.ListBox lst_stringReader;
+        private System.Windows.Forms.ListBox lst_streamReader;
     }
 }
 

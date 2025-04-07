@@ -110,7 +110,7 @@ namespace ReadFromName
             } //check if file exists
         } //read all the lines in the file
 
-        private void btn_stringReader_Click(object sender, EventArgs e)
+        private void btn_streamReader_Click(object sender, EventArgs e)
         {
             if (fullPath(true)) //check if file exists
             {
@@ -128,7 +128,7 @@ namespace ReadFromName
         {
             btn_readAllLine_Click(sender, e); //triger read all lines
             btn_readAllText_Click(sender, e); //triger read all text
-            btn_stringReader_Click(sender, e); //trigger the string reader
+            btn_streamReader_Click(sender, e); //trigger the string reader
         } //triger all the buttons
 
         #endregion UI
