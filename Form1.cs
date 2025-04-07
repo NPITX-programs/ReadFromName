@@ -116,13 +116,13 @@ namespace ReadFromName
             {
                 try //double check
                 {
-                    using(StreamReader sr = new StreamReader(fullPath()))
+                    using(StreamReader sr = new StreamReader(fullPath())) //creates a seperate instance of StreamReader with the file name built-in
                     {
-                        lst_streamReader.Items.Clear();
-                        while(!sr.EndOfStream)
+                        lst_streamReader.Items.Clear(); //clears the listbox
+                        while(!sr.EndOfStream) //add each line to it one by one
                         {
-                            string line = sr.ReadLine();
-                            lst_streamReader.Items.Add(line);
+                            string line = sr.ReadLine(); //gets the next line of text from the file
+                            lst_streamReader.Items.Add(line); //adds the item to the list
                         }
                     }
                 } catch (Exception ex) //check for error
