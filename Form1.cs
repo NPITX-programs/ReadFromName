@@ -96,6 +96,7 @@ namespace ReadFromName
         {
             if (fullPath(true)) //check if file exists
             {
+                lst_readAllLine.Items.Clear(); // clear the list to prevent duplicates, which are a tad annoying
                 try //double check
                 {
                     string[] contentArray = File.ReadAllLines(fullPath()); //get the full lines output
@@ -110,11 +111,35 @@ namespace ReadFromName
             } //check if file exists
         } //read all the lines in the file
 
+        private void btn_streamReader_Click(object sender, EventArgs e)
+        {
+            if (fullPath(true)) //check if file exists
+            {
+                try //double check
+                {
+                    using(StreamReader sr = new StreamReader(fullPath())) //creates a seperate instance of StreamReader with the file name built-in
+                    {
+                        lst_streamReader.Items.Clear(); //clears the listbox
+                        while(!sr.EndOfStream) //add each line to it one by one
+                        {
+                            string line = sr.ReadLine(); //gets the next line of text from the file
+                            lst_streamReader.Items.Add(line); //adds the item to the list
+                        }
+                    }
+                } catch (Exception ex) //check for error
+                {
+                    error(errorMessage, ex); //display error message
+                }
+            }
+        }
+
         private void btn_triggerAll_Click(object sender, EventArgs e)
         {
             btn_readAllLine_Click(sender, e); //triger read all lines
             btn_readAllText_Click(sender, e); //triger read all text
+            btn_streamReader_Click(sender, e); //trigger the string reader
         } //triger all the buttons
+
         #endregion UI
     }
 }
