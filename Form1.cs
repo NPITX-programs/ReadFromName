@@ -119,7 +119,7 @@ namespace ReadFromName
         {
             btn_readAllLine_Click(sender, e); //triger read all lines
             btn_readAllText_Click(sender, e); //triger read all text
-            btn_stringReader_Click(sender, e) //trigger the string reader
+            btn_stringReader_Click(sender, e); //trigger the string reader
         } //triger all the buttons
 
         #endregion UI
