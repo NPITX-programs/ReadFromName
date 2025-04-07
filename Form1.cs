@@ -118,7 +118,12 @@ namespace ReadFromName
                 {
                     using(StreamReader sr = new StreamReader(fullPath()))
                     {
-
+                        lst_streamReader.Items.Clear();
+                        while(!sr.EndOfStream)
+                        {
+                            string line = sr.ReadLine();
+                            lst_streamReader.Items.Add(line);
+                        }
                     }
                 } catch (Exception ex) //check for error
                 {
