@@ -116,7 +116,10 @@ namespace ReadFromName
             {
                 try //double check
                 {
-                    //insert code here
+                    using(StreamReader sr = new StreamReader(fullPath()))
+                    {
+
+                    }
                 } catch (Exception ex) //check for error
                 {
                     error(errorMessage, ex); //display error message
