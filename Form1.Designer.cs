@@ -38,6 +38,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_stringReader = new System.Windows.Forms.Button();
             this.lst_streamReader = new System.Windows.Forms.ListBox();
+            this.btn_close = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -142,11 +143,26 @@
             this.lst_streamReader.Size = new System.Drawing.Size(370, 108);
             this.lst_streamReader.TabIndex = 0;
             // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.Red;
+            this.btn_close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_close.Location = new System.Drawing.Point(12, 97);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(75, 44);
+            this.btn_close.TabIndex = 2;
+            this.btn_close.Text = "Close";
+            this.btn_close.UseVisualStyleBackColor = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btn_close;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -172,6 +188,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btn_stringReader;
         private System.Windows.Forms.ListBox lst_streamReader;
+        private System.Windows.Forms.Button btn_close;
     }
 }
 
