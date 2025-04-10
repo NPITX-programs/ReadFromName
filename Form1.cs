@@ -44,9 +44,16 @@ namespace ReadFromName
         #endregion messages
 
         #region fileAcess
-        private void updatePath()
+        private void updatePath(bool reset = false)
         {
-            
+            if(reset)
+            {
+                path = initialPath;
+            } else
+            {
+                path = txt_manualPath.Text;
+            }
+            txt_curPath.Text = path;
         }
         private string fullPath()
         {
@@ -161,16 +168,17 @@ namespace ReadFromName
         private void btn_clearIn_Click(object sender, EventArgs e)
         {
             txt_manualPath.Text= string.Empty; //clear input
+            updatePath();
         } //clear textbox
 
         private void btn_input_Click(object sender, EventArgs e)
         {
-
+            updatePath();
         }
 
         private void btn_showCurPath_Click(object sender, EventArgs e)
         {
-
+            txt_manualPath.Text = txt_curPath.Text;
         }
     }
 }

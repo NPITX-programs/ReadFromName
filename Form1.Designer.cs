@@ -46,6 +46,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_showCurPath = new System.Windows.Forms.Button();
             this.btn_input = new System.Windows.Forms.Button();
+            this.txt_curPath = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -179,6 +181,9 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.AutoSize = true;
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.txt_curPath);
             this.groupBox4.Controls.Add(this.btn_input);
             this.groupBox4.Controls.Add(this.btn_showCurPath);
             this.groupBox4.Controls.Add(this.btn_clearIn);
@@ -186,7 +191,7 @@
             this.groupBox4.Controls.Add(this.txt_manualPath);
             this.groupBox4.Location = new System.Drawing.Point(-2, 156);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(229, 162);
+            this.groupBox4.Size = new System.Drawing.Size(229, 181);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Controls";
@@ -214,9 +219,9 @@
             // 
             this.btn_showCurPath.Location = new System.Drawing.Point(0, 100);
             this.btn_showCurPath.Name = "btn_showCurPath";
-            this.btn_showCurPath.Size = new System.Drawing.Size(113, 23);
+            this.btn_showCurPath.Size = new System.Drawing.Size(163, 23);
             this.btn_showCurPath.TabIndex = 10;
-            this.btn_showCurPath.Text = "Show Current Path";
+            this.btn_showCurPath.Text = "Reset to Current Path";
             this.btn_showCurPath.UseVisualStyleBackColor = true;
             this.btn_showCurPath.Click += new System.EventHandler(this.btn_showCurPath_Click);
             // 
@@ -229,6 +234,24 @@
             this.btn_input.Text = "Update path";
             this.btn_input.UseVisualStyleBackColor = true;
             this.btn_input.Click += new System.EventHandler(this.btn_input_Click);
+            // 
+            // txt_curPath
+            // 
+            this.txt_curPath.Location = new System.Drawing.Point(6, 142);
+            this.txt_curPath.Name = "txt_curPath";
+            this.txt_curPath.ReadOnly = true;
+            this.txt_curPath.Size = new System.Drawing.Size(188, 20);
+            this.txt_curPath.TabIndex = 12;
+            this.txt_curPath.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Current Defined Path";
             // 
             // frm_main
             // 
@@ -259,6 +282,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -282,6 +306,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_showCurPath;
         private System.Windows.Forms.Button btn_input;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_curPath;
     }
 }
 
