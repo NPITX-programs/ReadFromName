@@ -25,8 +25,10 @@ namespace ReadFromName
         const string errorMessage = "I'm sorry dave, I'm afraid I can't do that";
         private void frm_main_Load(object sender, EventArgs e)
         {
-            txt_manualPath.Text = string.Empty; //ensure box starts empty
             initialPath = folderName + fileName + fileExtension;
+            updatePath(true);
+            txt_manualPath.Text = path; //ensure box starts with the default path
+
         } //initialization code
 
         #region messages
@@ -57,7 +59,14 @@ namespace ReadFromName
         }
         private string fullPath()
         {
-            string fullPath = folderName + fileName + fileExtension; //the path is in 3 parts for modularity. this combines them
+            string fullPath = string.Empty;
+            if (path != string.Empty)
+            {
+                fullPath = path; //use the path
+            } else
+            {
+                fullPath = initialPath; //if the fullpath was somehow  path is blank, use pre-set
+            }
             return fullPath; //this part outputs them
         } //full path (requires no input, it just combines the 3 pre-set variables). Due to method overloading, this is the "same" method as the one
         // that checks for the files existance. if you mathch this ones paramaters (meaning no input), it will do this one. Input a boolean, and it will match the other, and therefore check
@@ -169,6 +178,7 @@ namespace ReadFromName
         {
             txt_manualPath.Text= string.Empty; //clear input
             updatePath();
+            txt_curPath.Text = fullPath();
         } //clear textbox
 
         private void btn_input_Click(object sender, EventArgs e)
