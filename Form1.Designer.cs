@@ -39,9 +39,16 @@
             this.btn_stringReader = new System.Windows.Forms.Button();
             this.lst_streamReader = new System.Windows.Forms.ListBox();
             this.btn_close = new System.Windows.Forms.Button();
+            this.txt_manualPath = new System.Windows.Forms.TextBox();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_clearIn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lst_readAllText
@@ -83,7 +90,7 @@
             // 
             // btn_triggerAll
             // 
-            this.btn_triggerAll.Location = new System.Drawing.Point(12, 12);
+            this.btn_triggerAll.Location = new System.Drawing.Point(-2, 106);
             this.btn_triggerAll.Name = "btn_triggerAll";
             this.btn_triggerAll.Size = new System.Drawing.Size(75, 44);
             this.btn_triggerAll.TabIndex = 4;
@@ -148,13 +155,55 @@
             this.btn_close.BackColor = System.Drawing.Color.Red;
             this.btn_close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.Location = new System.Drawing.Point(12, 97);
+            this.btn_close.Location = new System.Drawing.Point(-2, 1);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(75, 44);
             this.btn_close.TabIndex = 2;
             this.btn_close.Text = "Close";
             this.btn_close.UseVisualStyleBackColor = false;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
+            // txt_manualPath
+            // 
+            this.txt_manualPath.Location = new System.Drawing.Point(0, 43);
+            this.txt_manualPath.Name = "txt_manualPath";
+            this.txt_manualPath.Size = new System.Drawing.Size(194, 20);
+            this.txt_manualPath.TabIndex = 7;
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btn_clearIn);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.txt_manualPath);
+            this.groupBox4.Location = new System.Drawing.Point(-2, 156);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(229, 100);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Controls";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Manual Path";
+            // 
+            // btn_clearIn
+            // 
+            this.btn_clearIn.Location = new System.Drawing.Point(0, 71);
+            this.btn_clearIn.Name = "btn_clearIn";
+            this.btn_clearIn.Size = new System.Drawing.Size(75, 23);
+            this.btn_clearIn.TabIndex = 9;
+            this.btn_clearIn.Text = "Clear Input";
+            this.btn_clearIn.UseVisualStyleBackColor = true;
             // 
             // frm_main
             // 
@@ -163,6 +212,7 @@
             this.AutoSize = true;
             this.CancelButton = this.btn_close;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -179,6 +229,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -196,6 +249,11 @@
         private System.Windows.Forms.Button btn_stringReader;
         private System.Windows.Forms.ListBox lst_streamReader;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.TextBox txt_manualPath;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btn_clearIn;
+        private System.Windows.Forms.Label label1;
     }
 }
 
