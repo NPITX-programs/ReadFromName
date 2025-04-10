@@ -1,6 +1,6 @@
 ﻿namespace ReadFromName
 {
-    partial class Form1
+    partial class frm_main
     {
         /// <summary>
         /// Required designer variable.
@@ -156,7 +156,7 @@
             this.btn_close.UseVisualStyleBackColor = false;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
-            // Form1
+            // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -167,7 +167,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_triggerAll);
-            this.Name = "Form1";
+            this.Name = "frm_main";
             this.Text = "Read from Name";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
