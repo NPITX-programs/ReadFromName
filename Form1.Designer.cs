@@ -48,6 +48,7 @@
             this.btn_input = new System.Windows.Forms.Button();
             this.txt_curPath = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_default = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -94,7 +95,7 @@
             // 
             // btn_triggerAll
             // 
-            this.btn_triggerAll.Location = new System.Drawing.Point(-2, 106);
+            this.btn_triggerAll.Location = new System.Drawing.Point(12, 214);
             this.btn_triggerAll.Name = "btn_triggerAll";
             this.btn_triggerAll.Size = new System.Drawing.Size(75, 44);
             this.btn_triggerAll.TabIndex = 4;
@@ -106,7 +107,7 @@
             // 
             this.groupBox1.Controls.Add(this.btn_readAllText);
             this.groupBox1.Controls.Add(this.lst_readAllText);
-            this.groupBox1.Location = new System.Drawing.Point(345, 12);
+            this.groupBox1.Location = new System.Drawing.Point(475, 199);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(452, 114);
             this.groupBox1.TabIndex = 5;
@@ -117,7 +118,7 @@
             // 
             this.groupBox2.Controls.Add(this.btn_readAllLine);
             this.groupBox2.Controls.Add(this.lst_readAllLine);
-            this.groupBox2.Location = new System.Drawing.Point(345, 190);
+            this.groupBox2.Location = new System.Drawing.Point(475, 319);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(452, 110);
             this.groupBox2.TabIndex = 2;
@@ -128,9 +129,9 @@
             // 
             this.groupBox3.Controls.Add(this.btn_stringReader);
             this.groupBox3.Controls.Add(this.lst_streamReader);
-            this.groupBox3.Location = new System.Drawing.Point(345, 322);
+            this.groupBox3.Location = new System.Drawing.Point(12, 319);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(452, 116);
+            this.groupBox3.Size = new System.Drawing.Size(452, 110);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
@@ -159,7 +160,7 @@
             this.btn_close.BackColor = System.Drawing.Color.Red;
             this.btn_close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.Location = new System.Drawing.Point(-2, 1);
+            this.btn_close.Location = new System.Drawing.Point(117, 214);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(75, 44);
             this.btn_close.TabIndex = 2;
@@ -169,9 +170,9 @@
             // 
             // txt_manualPath
             // 
-            this.txt_manualPath.Location = new System.Drawing.Point(0, 43);
+            this.txt_manualPath.Location = new System.Drawing.Point(0, 32);
             this.txt_manualPath.Name = "txt_manualPath";
-            this.txt_manualPath.Size = new System.Drawing.Size(194, 20);
+            this.txt_manualPath.Size = new System.Drawing.Size(915, 20);
             this.txt_manualPath.TabIndex = 7;
             // 
             // fileSystemWatcher1
@@ -182,6 +183,7 @@
             // groupBox4
             // 
             this.groupBox4.AutoSize = true;
+            this.groupBox4.Controls.Add(this.btn_default);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.txt_curPath);
             this.groupBox4.Controls.Add(this.btn_input);
@@ -189,12 +191,12 @@
             this.groupBox4.Controls.Add(this.btn_clearIn);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.txt_manualPath);
-            this.groupBox4.Location = new System.Drawing.Point(-2, 156);
+            this.groupBox4.Location = new System.Drawing.Point(12, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(229, 181);
+            this.groupBox4.Size = new System.Drawing.Size(921, 181);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Controls";
+            this.groupBox4.Text = "I/O";
             // 
             // btn_clearIn
             // 
@@ -209,7 +211,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 27);
+            this.label1.Location = new System.Drawing.Point(6, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 8;
@@ -237,10 +239,11 @@
             // 
             // txt_curPath
             // 
+            this.txt_curPath.Enabled = false;
             this.txt_curPath.Location = new System.Drawing.Point(6, 142);
             this.txt_curPath.Name = "txt_curPath";
             this.txt_curPath.ReadOnly = true;
-            this.txt_curPath.Size = new System.Drawing.Size(188, 20);
+            this.txt_curPath.Size = new System.Drawing.Size(909, 20);
             this.txt_curPath.TabIndex = 12;
             this.txt_curPath.TabStop = false;
             // 
@@ -253,13 +256,22 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Current Defined Path";
             // 
+            // btn_default
+            // 
+            this.btn_default.Location = new System.Drawing.Point(169, 71);
+            this.btn_default.Name = "btn_default";
+            this.btn_default.Size = new System.Drawing.Size(82, 23);
+            this.btn_default.TabIndex = 14;
+            this.btn_default.Text = "Set to Default";
+            this.btn_default.UseVisualStyleBackColor = true;
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.CancelButton = this.btn_close;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(939, 544);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.groupBox3);
@@ -308,6 +320,7 @@
         private System.Windows.Forms.Button btn_input;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_curPath;
+        private System.Windows.Forms.Button btn_default;
     }
 }
 
