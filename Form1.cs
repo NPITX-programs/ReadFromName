@@ -20,10 +20,13 @@ namespace ReadFromName
         string folderName = @"H:\Students_Folder\Charlie Hatch\Semesters\Multi-Semester\App Dev\Projects\App Dev 2\ReadFromName\";
         string fileName = "file";
         string fileExtension = ".txt";
+        string initialPath = string.Empty;
+        string path = string.Empty;
         const string errorMessage = "I'm sorry dave, I'm afraid I can't do that";
         private void frm_main_Load(object sender, EventArgs e)
         {
             txt_manualPath.Text = string.Empty; //ensure box starts empty
+            initialPath = folderName + fileName + fileExtension;
         } //initialization code
 
         #region messages
@@ -41,6 +44,10 @@ namespace ReadFromName
         #endregion messages
 
         #region fileAcess
+        private void updatePath()
+        {
+            
+        }
         private string fullPath()
         {
             string fullPath = folderName + fileName + fileExtension; //the path is in 3 parts for modularity. this combines them
