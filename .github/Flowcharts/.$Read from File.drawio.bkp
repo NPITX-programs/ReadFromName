@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2025-04-10T14:31:48.146Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="SbMHcQRM-VRZdDvRMC-G" version="24.2.5" type="device" pages="5">
+<mxfile host="Electron" modified="2025-04-10T14:54:34.913Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="jn_ZVCeS_YJYhORP_PMe" version="24.2.5" type="device" pages="5">
   <diagram id="MaTyHYsOuUUZ5ss4jBFP" name="Interface">
     <mxGraphModel dx="1434" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -259,16 +259,17 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="&lt;span style=&quot;background-color: initial;&quot;&gt;close&lt;/span&gt;" link="data:page/id,MaTyHYsOuUUZ5ss4jBFP" id="Q4GzqGX9vo1VUNm6bjYz-1">
-          <mxCell style="shape=offPageConnector;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-            <mxGeometry x="20" y="470" width="80" height="80" as="geometry" />
-          </mxCell>
-        </UserObject>
+        <mxCell id="zeNDp5L06zuYn3mKEEck-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Q4GzqGX9vo1VUNm6bjYz-2" target="zeNDp5L06zuYn3mKEEck-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <UserObject label="&lt;span style=&quot;background-color: initial;&quot;&gt;close&lt;/span&gt;" id="Q4GzqGX9vo1VUNm6bjYz-2">
           <mxCell style="shape=offPageConnector;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-            <mxGeometry x="20" y="30" width="80" height="80" as="geometry" />
+            <mxGeometry width="80" height="80" as="geometry" />
           </mxCell>
         </UserObject>
+        <mxCell id="zeNDp5L06zuYn3mKEEck-1" value="close program" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="160" width="80" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

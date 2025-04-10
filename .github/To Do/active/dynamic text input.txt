@@ -1,0 +1,3 @@
+add method to dynamicly change path. to quote the original mention of this:
+
+new feature: dynamic, textbox based input
