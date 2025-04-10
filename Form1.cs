@@ -132,6 +132,10 @@ namespace ReadFromName
                 }
             }
         }
+        private void btn_close_Click(object sender, EventArgs e) //close
+        {
+            Application.Exit(); //exit the program
+        }
 
         private void btn_triggerAll_Click(object sender, EventArgs e)
         {
@@ -142,9 +146,6 @@ namespace ReadFromName
 
         #endregion UI
 
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+
     }
 }
