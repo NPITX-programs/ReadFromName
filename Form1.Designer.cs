@@ -42,8 +42,8 @@
             this.txt_manualPath = new System.Windows.Forms.TextBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_clearIn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -187,15 +187,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Controls";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Manual Path";
-            // 
             // btn_clearIn
             // 
             this.btn_clearIn.Location = new System.Drawing.Point(0, 71);
@@ -204,6 +195,16 @@
             this.btn_clearIn.TabIndex = 9;
             this.btn_clearIn.Text = "Clear Input";
             this.btn_clearIn.UseVisualStyleBackColor = true;
+            this.btn_clearIn.Click += new System.EventHandler(this.btn_clearIn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Manual Path";
             // 
             // frm_main
             // 
@@ -226,6 +227,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Read from Name";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.frm_main_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

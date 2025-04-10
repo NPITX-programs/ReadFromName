@@ -21,6 +21,10 @@ namespace ReadFromName
         string fileName = "file";
         string fileExtension = ".txt";
         const string errorMessage = "I'm sorry dave, I'm afraid I can't do that";
+        private void frm_main_Load(object sender, EventArgs e)
+        {
+            txt_manualPath.Text = string.Empty; //ensure box starts empty
+        } //initialization code
 
         #region messages
         private void error(string message, Exception ex = null, bool revealException = false)
@@ -145,6 +149,12 @@ namespace ReadFromName
         } //triger all the buttons
 
         #endregion UI
+
+
+        private void btn_clearIn_Click(object sender, EventArgs e)
+        {
+            txt_manualPath.Text= string.Empty; //clear input
+        } //clear textbox
 
 
     }
