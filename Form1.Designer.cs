@@ -168,6 +168,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_triggerAll);
             this.Name = "frm_main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Read from Name";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
