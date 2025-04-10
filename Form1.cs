@@ -16,7 +16,7 @@ namespace ReadFromName
         public frm_main()
         {
             InitializeComponent();
-        }       
+        }
         string folderName = @"H:\Students_Folder\Charlie Hatch\Semesters\Multi-Semester\App Dev\Projects\App Dev 2\ReadFromName\";
         string fileName = "file";
         string fileExtension = ".txt";
@@ -48,10 +48,11 @@ namespace ReadFromName
         #region fileAcess
         private void updatePath(bool reset = false)
         {
-            if(reset)
+            if (reset)
             {
                 path = initialPath;
-            } else
+            }
+            else
             {
                 path = txt_manualPath.Text;
             }
@@ -63,7 +64,8 @@ namespace ReadFromName
             if (path != string.Empty)
             {
                 fullPath = path; //use the path
-            } else
+            }
+            else
             {
                 fullPath = initialPath; //if the fullpath was somehow  path is blank, use pre-set
             }
@@ -74,7 +76,7 @@ namespace ReadFromName
 
         private bool fullPath(bool confirm)
         {
-            if(confirm) //checks if confirm has an input, then checks if it's true
+            if (confirm) //checks if confirm has an input, then checks if it's true
             {
                 bool status = File.Exists(fullPath()); //if it is true, it will proceed to check if the file defined by fullPath exists
                 if (status)
@@ -131,7 +133,8 @@ namespace ReadFromName
                     {
                         lst_readAllLine.Items.Add(item); //add item to list box
                     } //repeat each individual line to add it
-                } catch (Exception ex) //check for error
+                }
+                catch (Exception ex) //check for error
                 {
                     error(errorMessage, ex); //display error if it somehow manages to not work even if the file is there
                 } //double check
@@ -144,16 +147,17 @@ namespace ReadFromName
             {
                 try //double check
                 {
-                    using(StreamReader sr = new StreamReader(fullPath())) //creates a seperate instance of StreamReader with the file name built-in
+                    using (StreamReader sr = new StreamReader(fullPath())) //creates a seperate instance of StreamReader with the file name built-in
                     {
                         lst_streamReader.Items.Clear(); //clears the listbox
-                        while(!sr.EndOfStream) //add each line to it one by one
+                        while (!sr.EndOfStream) //add each line to it one by one
                         {
                             string line = sr.ReadLine(); //gets the next line of text from the file
                             lst_streamReader.Items.Add(line); //adds the item to the list
                         }
                     }
-                } catch (Exception ex) //check for error
+                }
+                catch (Exception ex) //check for error
                 {
                     error(errorMessage, ex); //display error message
                 }
@@ -176,7 +180,7 @@ namespace ReadFromName
 
         private void btn_clearIn_Click(object sender, EventArgs e)
         {
-            txt_manualPath.Text= string.Empty; //clear input
+            txt_manualPath.Text = string.Empty; //clear input
             updatePath();
             txt_curPath.Text = fullPath();
         } //clear textbox
@@ -189,6 +193,11 @@ namespace ReadFromName
         private void btn_showCurPath_Click(object sender, EventArgs e)
         {
             txt_manualPath.Text = txt_curPath.Text;
+        }
+
+        private void btn_default_Click(object sender, EventArgs e)
+        {
+            updatePath(true);
         }
     }
 }

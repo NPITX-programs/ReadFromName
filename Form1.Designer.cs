@@ -42,13 +42,13 @@
             this.txt_manualPath = new System.Windows.Forms.TextBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btn_default = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_curPath = new System.Windows.Forms.TextBox();
+            this.btn_input = new System.Windows.Forms.Button();
+            this.btn_showCurPath = new System.Windows.Forms.Button();
             this.btn_clearIn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_showCurPath = new System.Windows.Forms.Button();
-            this.btn_input = new System.Windows.Forms.Button();
-            this.txt_curPath = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btn_default = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -198,6 +198,55 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "I/O";
             // 
+            // btn_default
+            // 
+            this.btn_default.Location = new System.Drawing.Point(169, 71);
+            this.btn_default.Name = "btn_default";
+            this.btn_default.Size = new System.Drawing.Size(82, 23);
+            this.btn_default.TabIndex = 14;
+            this.btn_default.Text = "Set to Default";
+            this.btn_default.UseVisualStyleBackColor = true;
+            this.btn_default.Click += new System.EventHandler(this.btn_default_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Current Defined Path";
+            // 
+            // txt_curPath
+            // 
+            this.txt_curPath.Enabled = false;
+            this.txt_curPath.Location = new System.Drawing.Point(6, 142);
+            this.txt_curPath.Name = "txt_curPath";
+            this.txt_curPath.ReadOnly = true;
+            this.txt_curPath.Size = new System.Drawing.Size(909, 20);
+            this.txt_curPath.TabIndex = 12;
+            this.txt_curPath.TabStop = false;
+            // 
+            // btn_input
+            // 
+            this.btn_input.Location = new System.Drawing.Point(81, 71);
+            this.btn_input.Name = "btn_input";
+            this.btn_input.Size = new System.Drawing.Size(82, 23);
+            this.btn_input.TabIndex = 11;
+            this.btn_input.Text = "Update path";
+            this.btn_input.UseVisualStyleBackColor = true;
+            this.btn_input.Click += new System.EventHandler(this.btn_input_Click);
+            // 
+            // btn_showCurPath
+            // 
+            this.btn_showCurPath.Location = new System.Drawing.Point(0, 100);
+            this.btn_showCurPath.Name = "btn_showCurPath";
+            this.btn_showCurPath.Size = new System.Drawing.Size(163, 23);
+            this.btn_showCurPath.TabIndex = 10;
+            this.btn_showCurPath.Text = "Reset to Current Path";
+            this.btn_showCurPath.UseVisualStyleBackColor = true;
+            this.btn_showCurPath.Click += new System.EventHandler(this.btn_showCurPath_Click);
+            // 
             // btn_clearIn
             // 
             this.btn_clearIn.Location = new System.Drawing.Point(0, 71);
@@ -216,54 +265,6 @@
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Manual Path";
-            // 
-            // btn_showCurPath
-            // 
-            this.btn_showCurPath.Location = new System.Drawing.Point(0, 100);
-            this.btn_showCurPath.Name = "btn_showCurPath";
-            this.btn_showCurPath.Size = new System.Drawing.Size(163, 23);
-            this.btn_showCurPath.TabIndex = 10;
-            this.btn_showCurPath.Text = "Reset to Current Path";
-            this.btn_showCurPath.UseVisualStyleBackColor = true;
-            this.btn_showCurPath.Click += new System.EventHandler(this.btn_showCurPath_Click);
-            // 
-            // btn_input
-            // 
-            this.btn_input.Location = new System.Drawing.Point(81, 71);
-            this.btn_input.Name = "btn_input";
-            this.btn_input.Size = new System.Drawing.Size(82, 23);
-            this.btn_input.TabIndex = 11;
-            this.btn_input.Text = "Update path";
-            this.btn_input.UseVisualStyleBackColor = true;
-            this.btn_input.Click += new System.EventHandler(this.btn_input_Click);
-            // 
-            // txt_curPath
-            // 
-            this.txt_curPath.Enabled = false;
-            this.txt_curPath.Location = new System.Drawing.Point(6, 142);
-            this.txt_curPath.Name = "txt_curPath";
-            this.txt_curPath.ReadOnly = true;
-            this.txt_curPath.Size = new System.Drawing.Size(909, 20);
-            this.txt_curPath.TabIndex = 12;
-            this.txt_curPath.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Current Defined Path";
-            // 
-            // btn_default
-            // 
-            this.btn_default.Location = new System.Drawing.Point(169, 71);
-            this.btn_default.Name = "btn_default";
-            this.btn_default.Size = new System.Drawing.Size(82, 23);
-            this.btn_default.TabIndex = 14;
-            this.btn_default.Text = "Set to Default";
-            this.btn_default.UseVisualStyleBackColor = true;
             // 
             // frm_main
             // 
