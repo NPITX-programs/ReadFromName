@@ -168,7 +168,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_triggerAll);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Read from Name";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
