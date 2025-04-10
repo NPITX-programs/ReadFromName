@@ -44,6 +44,8 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btn_clearIn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_showCurPath = new System.Windows.Forms.Button();
+            this.btn_input = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -177,12 +179,14 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btn_input);
+            this.groupBox4.Controls.Add(this.btn_showCurPath);
             this.groupBox4.Controls.Add(this.btn_clearIn);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.txt_manualPath);
             this.groupBox4.Location = new System.Drawing.Point(-2, 156);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(229, 100);
+            this.groupBox4.Size = new System.Drawing.Size(229, 162);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Controls";
@@ -205,6 +209,26 @@
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Manual Path";
+            // 
+            // btn_showCurPath
+            // 
+            this.btn_showCurPath.Location = new System.Drawing.Point(0, 100);
+            this.btn_showCurPath.Name = "btn_showCurPath";
+            this.btn_showCurPath.Size = new System.Drawing.Size(113, 23);
+            this.btn_showCurPath.TabIndex = 10;
+            this.btn_showCurPath.Text = "Show Current Path";
+            this.btn_showCurPath.UseVisualStyleBackColor = true;
+            this.btn_showCurPath.Click += new System.EventHandler(this.btn_showCurPath_Click);
+            // 
+            // btn_input
+            // 
+            this.btn_input.Location = new System.Drawing.Point(81, 71);
+            this.btn_input.Name = "btn_input";
+            this.btn_input.Size = new System.Drawing.Size(82, 23);
+            this.btn_input.TabIndex = 11;
+            this.btn_input.Text = "Update path";
+            this.btn_input.UseVisualStyleBackColor = true;
+            this.btn_input.Click += new System.EventHandler(this.btn_input_Click);
             // 
             // frm_main
             // 
@@ -256,6 +280,8 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btn_clearIn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_showCurPath;
+        private System.Windows.Forms.Button btn_input;
     }
 }
 

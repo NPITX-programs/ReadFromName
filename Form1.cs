@@ -163,6 +163,14 @@ namespace ReadFromName
             txt_manualPath.Text= string.Empty; //clear input
         } //clear textbox
 
+        private void btn_input_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btn_showCurPath_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
