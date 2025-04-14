@@ -16,11 +16,20 @@ namespace ReadFromName
         public frm_main()
         {
             InitializeComponent();
-        }       
+        }
         string folderName = @"H:\Students_Folder\Charlie Hatch\Semesters\Multi-Semester\App Dev\Projects\App Dev 2\ReadFromName\";
         string fileName = "file";
         string fileExtension = ".txt";
+        string initialPath = string.Empty;
+        string path = string.Empty;
         const string errorMessage = "I'm sorry dave, I'm afraid I can't do that";
+        private void frm_main_Load(object sender, EventArgs e)
+        {
+            initialPath = folderName + fileName + fileExtension;
+            updatePath(true);
+            txt_manualPath.Text = path; //ensure box starts with the default path
+
+        } //initialization code
 
         #region messages
         private void error(string message, Exception ex = null, bool revealException = false)
@@ -37,9 +46,29 @@ namespace ReadFromName
         #endregion messages
 
         #region fileAcess
+        private void updatePath(bool reset = false)
+        {
+            if (reset)
+            {
+                path = initialPath;
+            }
+            else
+            {
+                path = txt_manualPath.Text;
+            }
+            txt_curPath.Text = path;
+        }
         private string fullPath()
         {
-            string fullPath = folderName + fileName + fileExtension; //the path is in 3 parts for modularity. this combines them
+            string fullPath = string.Empty;
+            if (path != string.Empty)
+            {
+                fullPath = path; //use the path
+            }
+            else
+            {
+                fullPath = initialPath; //if the fullpath was somehow  path is blank, use pre-set
+            }
             return fullPath; //this part outputs them
         } //full path (requires no input, it just combines the 3 pre-set variables). Due to method overloading, this is the "same" method as the one
         // that checks for the files existance. if you mathch this ones paramaters (meaning no input), it will do this one. Input a boolean, and it will match the other, and therefore check
@@ -47,7 +76,7 @@ namespace ReadFromName
 
         private bool fullPath(bool confirm)
         {
-            if(confirm) //checks if confirm has an input, then checks if it's true
+            if (confirm) //checks if confirm has an input, then checks if it's true
             {
                 bool status = File.Exists(fullPath()); //if it is true, it will proceed to check if the file defined by fullPath exists
                 if (status)
@@ -104,7 +133,8 @@ namespace ReadFromName
                     {
                         lst_readAllLine.Items.Add(item); //add item to list box
                     } //repeat each individual line to add it
-                } catch (Exception ex) //check for error
+                }
+                catch (Exception ex) //check for error
                 {
                     error(errorMessage, ex); //display error if it somehow manages to not work even if the file is there
                 } //double check
@@ -117,16 +147,17 @@ namespace ReadFromName
             {
                 try //double check
                 {
-                    using(StreamReader sr = new StreamReader(fullPath())) //creates a seperate instance of StreamReader with the file name built-in
+                    using (StreamReader sr = new StreamReader(fullPath())) //creates a seperate instance of StreamReader with the file name built-in
                     {
                         lst_streamReader.Items.Clear(); //clears the listbox
-                        while(!sr.EndOfStream) //add each line to it one by one
+                        while (!sr.EndOfStream) //add each line to it one by one
                         {
                             string line = sr.ReadLine(); //gets the next line of text from the file
                             lst_streamReader.Items.Add(line); //adds the item to the list
                         }
                     }
-                } catch (Exception ex) //check for error
+                }
+                catch (Exception ex) //check for error
                 {
                     error(errorMessage, ex); //display error message
                 }
@@ -147,5 +178,26 @@ namespace ReadFromName
         #endregion UI
 
 
+        private void btn_clearIn_Click(object sender, EventArgs e)
+        {
+            txt_manualPath.Text = string.Empty; //clear input
+            updatePath();
+            txt_curPath.Text = fullPath();
+        } //clear textbox
+
+        private void btn_input_Click(object sender, EventArgs e)
+        {
+            updatePath();
+        }
+
+        private void btn_showCurPath_Click(object sender, EventArgs e)
+        {
+            txt_manualPath.Text = txt_curPath.Text;
+        }
+
+        private void btn_default_Click(object sender, EventArgs e)
+        {
+            updatePath(true);
+        }
     }
 }
